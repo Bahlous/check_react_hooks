@@ -1,7 +1,6 @@
 import React from 'react'
 import {Card, Button} from 'react-bootstrap'
-// import { moviesData } from '../MovieData'
-// import ListMovie from './ListMovie';
+import Rating from './Rating'
 
 const CardMovie = ({movie}) => {
   return (
@@ -10,6 +9,7 @@ const CardMovie = ({movie}) => {
       <Card.Img style={{height:'400px'}} variant="top" src={movie.posterUrl} />
       <Card.Body>
         <Card.Title>{movie.title}</Card.Title>
+        <Rating searchRate={movie.rate} isRating={false}/>
         <Card.Text style={{height:'160px'}}>
           {movie.description}
           </Card.Text>
